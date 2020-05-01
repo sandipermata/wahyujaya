@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+.loader {
+	position:absolute;
+	top:0;
+	left:20px;
+}
+
+.border-container {
+	border:1px solid #DFDFDF;
+	border-radius:6px;
+	padding-top:20px;
+	margin-top:15px;
+}
+
+.title-container {
+	position:absolute;
+	top:-10px;
+	font-weight:bold;
+	background-color:#FFF;
+	padding:0px 5px;
+}
+
+.konten {
+	position:absolute; 
+	border:1px solid #CCC; 
+	background:#FFF; 
+	width:100%;
+	z-index:9999;
+	max-height:200px;
+	overflow:scroll;
+	overflow-x: hidden;
+}
+
+.konten .aa {
+	cursor:pointer;
+	width:100%;
+	text-decoration:none;
+	color:#000;
+	padding:5px 0px 3px 10px;
+}
+
+.konten .aa:hover {
+	background-color:#00C;
+	color:#FFF;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  margin: 0; 
+}
+
+.lbl {
+	text-align:right;
+	font-weight:bold;
+}

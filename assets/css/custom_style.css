@@ -1,0 +1,238 @@
+/*
+* custom style for this apps
+* created Yayan Agustyan on 4th November 2018
+*
+*/
+
+[ng\:cloak],[ng-cloak],.ng-cloak{
+			display:none !important
+		}
+
+    [number\:format],[number-format], .number-format {
+      text-align: right;
+    }
+		
+		.LoadImg {
+			position:absolute;
+			top:0;
+			height:80px;
+		}
+		
+		.progress-bar span {
+			display:none;
+		}
+
+		.progress-bar:hover span {
+			display:block;
+			position:absolute;
+			z-index:999;
+			top:0;
+		}
+
+    .textloading {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 111;
+      background: #FFF
+    }
+    
+    #loading {
+      position: absolute;
+      left: calc(50% - 100px);
+      top: calc(50% - 25px);
+      z-index: 9999
+    }
+    
+    .uil-ripple {
+      position: absolute;
+      left: calc(50% - 90px);
+      top: calc(50% - 90px);
+      opacity: .5;
+      z-index: 999
+    }
+    
+    .ld-l {
+      opacity: 0;
+      animation: ld-in 3s 0.0s ease infinite;
+    }
+    
+    .ld-o {
+      opacity: 0;
+      animation: ld-in 3s 0.1s ease infinite;
+    }
+    
+    .ld-a {
+      opacity: 0;
+      animation: ld-in 3s 0.2s ease infinite;
+    }
+    
+    .ld-d {
+      opacity: 0;
+      animation: ld-in 3s 0.3s ease infinite;
+    }
+    
+    .ld-i {
+      opacity: 0;
+      animation: ld-in 3s 0.4s ease infinite;
+    }
+    
+    .ld-n {
+      opacity: 0;
+      animation: ld-in 3s 0.5s ease infinite;
+    }
+    
+    .ld-g {
+      opacity: 0;
+      animation: ld-in 3s 0.6s ease infinite;
+    }
+    
+    @keyframes ld-in {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      30% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .text-left {
+      text-align: left !important;
+    }
+
+    /* has-feedback with right icon */
+    .form-group .form-control-feedback {
+      top: 0;
+      right: 20px;
+      pointer-events: initial; /* or - auto // or -  unset  */
+      cursor: pointer;
+    }
+
+    /* has-feedback with right text */
+    .form-group .feedback-label {
+      font-size: 10px;
+      text-align: right;
+      margin-right: 5px;
+      padding-top: 3px;
+    }
+
+    /* has-feedback input with left text */
+    .feedback-left .form-control {
+      padding-right: 10px;
+      padding-left: 30px;
+    }
+
+    /* has-feedback with left text */
+    .feedback-left .form-control-feedback {
+      position: absolute;
+      top: -2px;
+      left: 20px;
+      font-size: 12px;
+      display: block;
+      width: 34px;
+      height: 34px;
+      line-height: 34px;
+      text-align: left;
+    }
+
+    /* overide Select 2 class */
+    .select2 {
+      width: 100% !important;
+      font-size: 12px;
+    }
+
+    .select2-container .select2-selection--single {
+      border: 1px solid #E3E3E3 !important;
+      height: 30px !important;
+    }
+
+    .select2-container .select2-selection--single .select2-selection__rendered {
+      line-height: 27px !important;
+      margin-left: -2px !important; 
+      margin-top: -5px !important;
+    }
+
+    .select2-container .select2-selection--single .select2-selection__arrow {
+      height: 28px;
+      width: 28px;
+      right: -3px; 
+    }
+
+    .select2-container .select2-selection--single .select2-selection__arrow b {
+      border-color: #999 transparent transparent transparent;
+      border-width: 4px 4px 0 4px; 
+    }
+
+    .select2-container--open .select2-selection--single .select2-selection__arrow b {
+      border-color: transparent transparent #999 transparent !important;
+      border-width: 0 4px 4px 4px !important; 
+    }
+
+
+    /* rating star */
+    .stars-outer {
+      display: inline-block;
+      position: relative;
+      font-family: FontAwesome;
+    }
+
+    .stars-outer::before {
+      content: "\f006   \f006   \f006   \f006   \f006";
+    }
+
+    .stars-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+    }
+
+    .stars-inner::before {
+      content: "\f005   \f005   \f005   \f005   \f005";
+      color: #f8ce0b;
+    }
+
+    li.treeview > .treeview-menu > li {
+      margin-left: 20px;
+    }
+
+    li.treeview:hover > a,
+    li.treeview.active > a {
+      border-left: 3px solid #00a65a;
+    }
+
+    li.treeview.active > a > i.fa,
+    li.treeview.active > a > span {
+      color: #00a65a;
+    }
+
+    li.treeview.active > .treeview-menu > li.active i::before,
+    li.treeview.active > .treeview-menu > li.active a {
+      content: "\f192";
+      color: #00a65a;
+    }
+
+    .checkbox_label {
+      position: absolute; 
+      margin-top: 0px;
+      margin-left: 2px;
+      cursor: pointer;
+    }
+
+    input[type='checkbox']{
+      cursor: pointer;
+    }
+
+    .label_amount {
+      font-size: 36px; 
+      margin-top: -15px; 
+      text-align: right;
+    }

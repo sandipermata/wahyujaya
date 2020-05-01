@@ -1,0 +1,311 @@
+    body {
+    font-family: tahoma;
+    font-size: 10px;
+    color: black ;
+    background-color:white;
+
+
+    }
+
+     input.box{
+     font-family: tahoma;
+     font-size: 9pt;
+     font-style: normal;
+     }
+
+     textarea.box{
+     font-family: tahoma;
+     font-size: 9pt;
+     font-style: normal;
+     }
+
+     select.Menu{
+     font-family: tahoma;
+     font-size: 9pt;
+     }
+
+     option.MenuSatu{
+     font-family: tahoma;
+     font-size: 9pt;
+     color:black;
+     }
+     option.MenuDua{
+     font-family: tahoma;
+     font-size: 9pt;
+     color:black;
+     }
+
+
+     select.Menu1A{
+     font-family: tahoma;
+     font-size: 10pt;
+     font-style: normal;
+     color: midnightblue;
+     font-weight :bold;
+     background-color:lightgrey;
+     }
+
+     option.Menu1B{
+     color:black;
+     background-color:teal;
+     }
+     .nolink {
+	     color:black;
+	     text-decoration: none;
+     }
+
+    .link a, a.link{ font-family: arial,verdana,helvetica; font-size: 12px; color:midnightblue; text-decoration: none; font-weight: bold;  }
+    .link a:hover, a.link:hover{ color: royalblue; font-size: 12px; font-weight: bold; }
+    .link {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #f0f4f9}
+
+    
+    .link1 a, a.link1{ font-family: arial,verdana,helvetica; font-size: 11px; color:maroon; text-decoration: none; font-weight: bold;  }
+    .link1 a:hover, a.link1:hover{ color: midnightblue; font-size: 11px; font-weight: bold; text-decoration:none; }
+    .link1 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #f0f4f9; text-decoration:none;}
+
+    .link2 a, a.link2{ font-family: arial,verdana,helvetica; font-size: 11px; color:midnightblue; text-decoration: none; font-weight: bold;  }
+    .link2 a:hover, a.link2:hover{ color: royalblue; font-size: 11px; font-weight: bold; text-decoration:none; }
+    .link2 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #f0f4f9; text-decoration:none;}
+
+    .power a, a.power{ font-family: arial,verdana,helvetica; font-size: 12px; color:white; text-decoration: none; font-weight: bold;  }
+    .power a:hover, a.power:hover{ color: royalblue; font-size: 12px; font-weight: bold; }
+
+    .power {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #f0f4f9}
+
+    .gubrak a, a.gubrak{ font-family: arial,verdana,helvetica; font-size: 11px; color:midnightblue; text-decoration: none; font-weight: bold;  }
+    .gubrak a:hover, a.gubrak:hover{ color: royalblue; font-size: 11px; font-weight: bold; }
+    .gubrak {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #f0f4f9}
+
+    .empty a, a.empty{ font-family: arial,verdana,helvetica; font-size: 11px; color:lightgrey; text-decoration: none; font-weight: bold;  }
+    .empty a:hover, a.empty:hover{ color: royalblue; font-size: 11px; font-weight: bold; }
+    .empty {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #f0f4f9}
+
+    hr {color: sienna}
+    p {margin-left: 16px}
+           .jumlah { font-family: tahoma;
+           font-size: 10px;
+           font-weight :bold;
+           color:gray;
+           }
+
+          .tabel1  {
+           font-family: arial;
+           font-size: 12px;
+           color: black ;
+           background: silver ;
+           }
+           .tabel2 { 
+           font-family: Gill Sans MT;
+           font-size: 12px;
+           color: black ;
+           background: whitesmoke
+           }
+
+
+
+           .td1 { font-family: tahoma;
+           font-size: 12px;
+           color: black;
+           font-weight: bold;
+           }
+
+           .td2 {
+           font-family: tahoma;
+           font-size: 12px;
+           color: midnightblue;
+           font-weight: bold;
+           }
+
+           .td3 { font-family: tahoma;
+           font-size: 12px;
+           color: navy;
+           }
+           .tableutama  {
+                         font-family: tahoma;
+                         font-size: 12px;
+                         color: black;
+                         font-weight: bold;
+                         }
+           .besar{font-family : Arial;
+           font-size:30px;
+           color : darkblue;
+           font-weight :bold;
+           }
+
+           .sedang{font-family : Arial;
+           font-size: 14px;
+           color: midnightblue;
+           font-weight :bold;
+           }
+
+           .kecil{font-family : Arial;
+           font-size:12px;
+           color : black;
+           font-weight :bold;
+           }
+
+           .Menu1 { font-family: tahoma;
+           font-family: tahoma;
+           font-size: 10pt;
+           font-style: normal;
+           background-color:lightgrey;
+           }
+
+           .Menu2 { font-family: tahoma;
+           font-size: 10pt;
+           font-style: normal;
+           background-color:silver;
+           }
+
+
+           .judul{font-family : tahoma;
+           font-size: 20px;
+           color: black;
+
+           }
+
+           .utama{font-family : tahoma;
+           font-size: 12px;
+
+           }
+           .cadang{font-family : tahoma;
+           font-size: 12px;
+           font-weight :bold;
+           color: teal;
+           }
+
+           .azure{font-family : tahoma;
+           font-size:12px;
+           color : azure;
+           }
+
+                  .terang {
+                          background: #EAF3FA;
+                          font-family: tahoma;
+                          font-size: 12px;
+                          color: black;}
+                          
+                  .gelap {
+                          background: whitesmoke;
+                          font-family: tahoma;
+                          font-size: 12px;
+                          color: black; }
+                  .sorot {
+                         background: lightblue;
+                         font-family: tahoma;
+                         font-size: 12px;
+                         color: navy; }
+
+
+           .black
+           {font-family : tahoma;
+           font-size:11px;
+           color : black;
+           }
+           
+           .lightgrey
+           {font-family : tahoma;
+           font-size:11px;
+           color : lightgrey;
+           }
+           
+           .table_black {
+            font-family : tahoma;
+           font-size:11px;
+           color : black;
+           background: silver ;
+           }
+           .black_kecil
+           {
+           font-family : tahoma;
+           font-size:9px;
+           color : black;
+           }
+           .midnightblue
+           {font-family : tahoma;
+           font-size:11px;
+           color : midnightblue;
+           }
+           .midnightblue2
+           {font-family : tahoma;
+           font-size:11px;
+           color : midnightblue;
+           }
+
+           .putih
+           {font-family : tahoma;
+           font-size:11px;
+           color : white;
+           }
+           
+            .orange
+           {font-family : tahoma;
+           font-size:11px;
+           color : #FF6600;
+           font-weight :bold;
+           }
+           
+               .utama1{
+                 font-family : tahoma;
+                  font-size: 11px;
+                  font-weight: bold;
+                  color: midnightblue;
+                  }
+
+                  .utama2{
+                  font-family : tahoma;
+                  font-size: 11px;
+                  color: black;
+
+                  }
+                  
+                  .a {
+                  text-decoration: none; 
+                  font-size: 11px; 
+                  font-family: verdana; 
+                  color: blue; 
+                  font-weight: bold; }
+                  
+                  .content {
+	         border: 1px dashed black;
+	         background color: white;
+	         padding: 10px;
+	         z-index: 3;
+                 }
+                 
+                 .back_lightgrey
+                 {font-family : tahoma;
+                 font-size:11px;
+                 background: gainsboro;
+                 color : black;
+                 }
+                 
+                 .calender{font-family : Tahoma;
+                  font-size:10px;
+                  color : white;
+                 }
+           
+                .c1{font-family : Tahoma;
+                font-size:10px;
+                color : yellow;
+                }
+
+
+                 .dasar
+                 {font-family : tahoma;
+                  font-size:12px;
+                  color : white;
+                  }
+                  
+                    .warna0{
+                   background: #EAF3FA;
+                   font-family: tahoma;
+                   font-size: 11px;
+                   color: black;}
+
+                  .warna1{
+                    background: #F0FFFF;
+                    font-family: tahoma;
+                    font-size: 11px;
+                    color: black; }
+
