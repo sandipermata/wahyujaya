@@ -151,7 +151,7 @@
                         <td align="center"><b>ID EWS</b></td>
                         <td align="center"><b>Lokasi</b></td>
                         <td align="center"><b>Peta</b></td>
-                        <td align="center"><b>KA Melintas JPL</b></td>
+                        <td align="center"><b>KA Melintas Nomor Perlintasan</b></td>
                         <td align="center"><b>Batterai</b></td>
                         <td align="center" width="100"><b>Histori Data</b></td>
                       </tr>
@@ -358,7 +358,7 @@
                       <td> : {{header.ews_loc_lat}} , {{header.ews_loc_lon}}</td>
                     </tr>
                     <tr>
-                      <td>No JPL</td>
+                      <td>Nomor Perlintasan</td>
                       <td> : {{header.ews_jpl}}</td>
                     </tr>
                     <tr>
@@ -569,7 +569,7 @@
                 </tr>
                 <tr bgcolor="#d5dce4">
                   <td width="50">1</td>
-                  <td width="200">Nomor JPL</td>
+                  <td width="200">Nomor Perlintasan</td>
                   <td width="30">:</td>
                   <td>{{dataumum.ews_jpl}}</td>
                 </tr>

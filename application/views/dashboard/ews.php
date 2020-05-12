@@ -269,7 +269,7 @@
                       <td> : {{header.ews_loc_lat}} , {{header.ews_loc_lon}}</td>
                     </tr>
                     <tr>
-                      <td>No JPL</td>
+                      <td>Nomor Perlintasan</td>
                       <td> : {{header.ews_jpl}}</td>
                     </tr>
                     <tr>
