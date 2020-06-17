@@ -33,21 +33,21 @@ class Ews {
           FROM v_last_ews_rpt WHERE ews_sn = '" . $value['ews_ip'] . "' ");
 
         foreach ($rpt['data'] as $k => $val) {
-          //lampu merah
-          if( floatval($val['ews_arus_lam_stop']) >= 0.20 && $val['ews_arah'] != "NONE" ){
+           //lampu merah
+           if( floatval($val['ews_arus_lam_stop']) >= 0.10 && $val['ews_arah'] != "NONE" ){
             $rpt['data'][$k]['lampu_merah'] = "ON";
-          }elseif (floatval($val['ews_arus_lam_stop']) < 0.20 && $val['ews_arah'] != "NONE") {
+          }elseif (floatval($val['ews_arus_lam_stop']) < 0.10 && $val['ews_arah'] != "NONE") {
             $rpt['data'][$k]['lampu_merah'] = "RUSAK";
-          }elseif (floatval($val['ews_arus_lam_stop']) < 0.20 && $val['ews_arah'] == "NONE") {
+          }elseif (floatval($val['ews_arus_lam_stop']) < 0.10 && $val['ews_arah'] == "NONE") {
             $rpt['data'][$k]['lampu_merah'] = "OFF";
           }
 
           //lampu kuning
-          if( floatval($val['ews_arus_lam_flash']) >= 0.20 && $val['ews_arah'] == "NONE" ){
+          if( floatval($val['ews_arus_lam_flash']) >= 0.10 && $val['ews_arah'] == "NONE" ){
             $rpt['data'][$k]['lampu_kuning'] = "ON";
-          }elseif (floatval($val['ews_arus_lam_flash']) < 0.20 && $val['ews_arah'] == "NONE") {
+          }elseif (floatval($val['ews_arus_lam_flash']) < 0.10 && $val['ews_arah'] == "NONE") {
             $rpt['data'][$k]['lampu_kuning'] = "RUSAK";
-          }elseif (floatval($val['ews_arus_lam_flash']) < 0.20 && $val['ews_arah'] != "NONE") {
+          }elseif (floatval($val['ews_arus_lam_flash']) < 0.10 && $val['ews_arah'] != "NONE") {
             $rpt['data'][$k]['lampu_kuning'] = "OFF";
           }
 
@@ -63,17 +63,17 @@ class Ews {
 
           //lampu arah
           //ews_arus_lam_left, ews_arus_lam_right
-          if( floatval($val['ews_arus_lam_left']) < 0.15 && $val['ews_arah'] == "LEFT" ){
+          if( floatval($val['ews_arus_lam_left']) < 0.10 && $val['ews_arah'] == "LEFT" ){
             $rpt['data'][$k]['lampu_arah'] = "rusak";
-          }elseif (floatval($val['ews_arus_lam_right']) < 0.15 && $val['ews_arah'] == "RIGHT") {
+          }elseif (floatval($val['ews_arus_lam_right']) < 0.10 && $val['ews_arah'] == "RIGHT") {
             $rpt['data'][$k]['lampu_arah'] = "rusak";
-          }elseif (floatval($val['ews_arus_lam_left']) >= 0.15 && $val['ews_arah'] == "LEFT") {
+          }elseif (floatval($val['ews_arus_lam_left']) >= 0.10 && $val['ews_arah'] == "LEFT") {
             $rpt['data'][$k]['lampu_arah'] = "kiri_ok";
-          }elseif (floatval($val['ews_arus_lam_right']) >= 0.15 && $val['ews_arah'] == "RIGHT") {
+          }elseif (floatval($val['ews_arus_lam_right']) >= 0.10 && $val['ews_arah'] == "RIGHT") {
             $rpt['data'][$k]['lampu_arah'] = "kanan_ok";
-          }elseif (floatval($val['ews_arus_lam_flash']) < 0.20 && $val['ews_arah'] == "NONE") {
+          }elseif (floatval($val['ews_arus_lam_flash']) < 0.10 && $val['ews_arah'] == "NONE") {
             $rpt['data'][$k]['lampu_arah'] = "none";
-          }elseif (floatval($val['ews_arus_lam_flash']) >= 0.20 && $val['ews_arah'] == "NONE") {
+          }elseif (floatval($val['ews_arus_lam_flash']) >= 0.10 && $val['ews_arah'] == "NONE") {
             $rpt['data'][$k]['lampu_arah'] = "none";
           }
 
@@ -499,21 +499,21 @@ class Ews {
       }
 
       //lampu merah
-      if( floatval($value['ews_arus_lam_stop']) >= 0.20 && $value['ews_arah'] != "NONE" ){
-        $query['data'][$key]['lampu_merah'] = "ON";
-      }elseif (floatval($value['ews_arus_lam_stop']) < 0.20 && $value['ews_arah'] != "NONE") {
-        $query['data'][$key]['lampu_merah'] = "RUSAK";
-      }elseif (floatval($value['ews_arus_lam_stop']) < 0.20 && $value['ews_arah'] == "NONE") {
-        $query['data'][$key]['lampu_merah'] = "OFF";
+      if( floatval($val['ews_arus_lam_stop']) >= 0.10 && $val['ews_arah'] != "NONE" ){
+        $rpt['data'][$k]['lampu_merah'] = "ON";
+      }elseif (floatval($val['ews_arus_lam_stop']) < 0.10 && $val['ews_arah'] != "NONE") {
+        $rpt['data'][$k]['lampu_merah'] = "RUSAK";
+      }elseif (floatval($val['ews_arus_lam_stop']) < 0.10 && $val['ews_arah'] == "NONE") {
+        $rpt['data'][$k]['lampu_merah'] = "OFF";
       }
 
-      //lampu kuning
-      if( floatval($value['ews_arus_lam_flash']) >= 0.20 && $value['ews_arah'] == "NONE" ){
-        $query['data'][$key]['lampu_kuning'] = "ON";
-      }elseif (floatval($value['ews_arus_lam_flash']) < 0.20 && $value['ews_arah'] == "NONE") {
-        $query['data'][$key]['lampu_kuning'] = "RUSAK";
-      }elseif (floatval($value['ews_arus_lam_flash']) < 0.20 && $value['ews_arah'] != "NONE") {
-        $query['data'][$key]['lampu_kuning'] = "OFF";
+       //lampu kuning
+      if( floatval($val['ews_arus_lam_flash']) >= 0.10 && $val['ews_arah'] == "NONE" ){
+        $rpt['data'][$k]['lampu_kuning'] = "ON";
+      }elseif (floatval($val['ews_arus_lam_flash']) < 0.10 && $val['ews_arah'] == "NONE") {
+        $rpt['data'][$k]['lampu_kuning'] = "RUSAK";
+      }elseif (floatval($val['ews_arus_lam_flash']) < 0.10 && $val['ews_arah'] != "NONE") {
+        $rpt['data'][$k]['lampu_kuning'] = "OFF";
       }
 
       // $arah    = ['arah_kanan.gif','arah_kiri.gif','arah-none.png','arah_kanan_rusak.png','arah_kiri_rusak.png'];
@@ -528,18 +528,18 @@ class Ews {
 
       //lampu arah
       //ews_arus_lam_left, ews_arus_lam_right
-      if( floatval($value['ews_arus_lam_left']) < 0.15 && $value['ews_arah'] == "LEFT" ){
-        $query['data'][$key]['lampu_arah'] = $arah[4];
-      }elseif (floatval($value['ews_arus_lam_right']) < 0.15 && $value['ews_arah'] == "RIGHT") {
-        $query['data'][$key]['lampu_arah'] = $arah[3];
-      }elseif (floatval($value['ews_arus_lam_left']) >= 0.15 && $value['ews_arah'] == "LEFT") {
-        $query['data'][$key]['lampu_arah'] = $arah[1];
-      }elseif (floatval($value['ews_arus_lam_right']) >= 0.15 && $value['ews_arah'] == "RIGHT") {
-        $query['data'][$key]['lampu_arah'] = $arah[0];
-      }elseif (floatval($value['ews_arus_lam_flash']) < 0.20 && $value['ews_arah'] == "NONE") {
-        $query['data'][$key]['lampu_arah'] = $arah[2];
-      }elseif (floatval($value['ews_arus_lam_flash']) >= 0.20 && $value['ews_arah'] == "NONE") {
-        $query['data'][$key]['lampu_arah'] = $arah[2];
+      if( floatval($val['ews_arus_lam_left']) < 0.10 && $val['ews_arah'] == "LEFT" ){
+        $rpt['data'][$k]['lampu_arah'] = "rusak";
+      }elseif (floatval($val['ews_arus_lam_right']) < 0.10 && $val['ews_arah'] == "RIGHT") {
+        $rpt['data'][$k]['lampu_arah'] = "rusak";
+      }elseif (floatval($val['ews_arus_lam_left']) >= 0.10 && $val['ews_arah'] == "LEFT") {
+        $rpt['data'][$k]['lampu_arah'] = "kiri_ok";
+      }elseif (floatval($val['ews_arus_lam_right']) >= 0.10 && $val['ews_arah'] == "RIGHT") {
+        $rpt['data'][$k]['lampu_arah'] = "kanan_ok";
+      }elseif (floatval($val['ews_arus_lam_flash']) < 0.10 && $val['ews_arah'] == "NONE") {
+        $rpt['data'][$k]['lampu_arah'] = "none";
+      }elseif (floatval($val['ews_arus_lam_flash']) >= 0.10 && $val['ews_arah'] == "NONE") {
+        $rpt['data'][$k]['lampu_arah'] = "none";
       }
 
       // Mark : - Speaker
