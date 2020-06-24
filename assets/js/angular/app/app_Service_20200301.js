@@ -403,7 +403,7 @@ angular.module('starter.services', [])
 
 
 		getWeather: function(kota){
-			return $http.get("https://api.apixu.com/v1/current.json?key=6733513206fb451287083310191606&q=" + kota );
+			return $http.get("http://api.weatherstack.com/current?access_key=61cc78ba51873afa238930c821b5abf9&query=" + kota );
 		},
 
 		getArahKereta: function(sn){
