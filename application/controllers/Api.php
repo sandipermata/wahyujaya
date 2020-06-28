@@ -239,7 +239,7 @@ class Api extends REST_Controller {
   }
 
   public function user_menu_get($id){
-    $this->auth();
+    // $this->auth();
     $this->adm->getUserMenu($id);
   }
 

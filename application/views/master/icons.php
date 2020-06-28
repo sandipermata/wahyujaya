@@ -132,11 +132,10 @@
                 <div class="col-sm-3">
                   <select class="form-control select2" id="icon_type">
                     <option value="">-- Type --</option>
-                    <option value="1">Belum Terpasang</option>
-                    <option value="1">Terpasang</option>
+                    <option value="0">Belum Terpasang</option>
                     <option value="1">Normal</option>
-                    <option value="3">Error</option>
-                    <option value="2">Bergerak</option>
+                    <option value="2">None</option>
+                    <option value="3">Rusak</option>
                   </select>
                 </div>
               </div>

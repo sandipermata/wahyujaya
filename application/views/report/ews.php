@@ -389,9 +389,9 @@
 
               <div class="col-sm-6">
                 <div class="row" align="right">
-                  {{weathers.current.condition.text || "mengambil data ..." }} <br>
-                  {{weathers.current.temp_c || 0 }} <sup>o</sup>C<br>
-                  <img ng-src="https:{{weathers.current.condition.icon}}" height="100" width="100" >
+                  {{weathers.current.weather_descriptions[0] || "mengambil data ..." }} <br>
+                  {{weathers.current.temperature || 0 }} <sup>o</sup>C<br>
+                  <img ng-src="https:{{weathers.current.weather_icons[0]}}" height="100" width="100" >
                 </div>
               </div>
             </div>

@@ -10,7 +10,7 @@ class Admin {
   }
 
   public function getAllUser(){
-    return $this->func->select_all("tb_admin");
+    return $this->func->select_all("tb_admin"); //test changes
   }
 
   public function getLogin($user, $pass){
