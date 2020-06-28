@@ -453,90 +453,118 @@ angular.module('starter.controllers', [])
 						mapTypeId: google.maps.MapTypeId.ROADMAP
 					});
 
-					var markers = locationsews.map(function(location, i) {
-						if(location.jml < 1){
-							return new google.maps.Marker({
-								position: location,
-								label: location.ipaddr,
-								icon: {
-									//url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
-									url: $rootScope.base_url + "image/marker_hitam_kecil.png" 
-								}
-							});
-						}else{
-							var rep = location.rpt[0];
-							// "ews_battery_percent": 0,
-							// "ews_arah": "LEFT",
-							// "ews_status_sensor_L": "FAIL",
-							// "ews_status_sensor_C": "OK",
-							// "ews_status_sensor_R": "OK",
-							// "ews_suhu_confan": "28.30\/27.80",
-							// "ews_teg_out_sirine": 10.48,
-							// "ews_arus_lam_stop": 0.01,
-							// "ews_arus_lam_flash": "",
-							// "ews_arus_lam_left": "",
-							// "ews_arus_lam_right": 0,
-							// "ews_arus_speaker": "",
-							// "lampu_merah": "RUSAK",
-							// "lampu_kuning": "OFF",
-							// "arah_icon": "kiri",
-							// "lampu_arah": "kiri_rusak",
-							// "speaker": "RUSAK"
-							if(rep.lampu_merah == "RUSAK" || rep.lampu_kuning == "RUSAK" || rep.lampu_arah == "rusak" || rep.speaker == "RUSAK" ){
+					var belumTerpasang = "";
+					var iconNormal = "";
+					var iconNone = "";
+					var iconRusak = "";
+
+					NewTrans.getIconsType('ews').then(function(res){
+						var result = res.data;
+						$scope.iconMapsEws = result.data;
+
+						angular.forEach(result.data, function(value, key){
+							if(value.icon_type == "0"){
+								belumTerpasang = value.icon_image;
+							}else if(value.icon_type == "1"){
+								iconNormal = value.icon_image;
+							}else if(value.icon_type == "2"){
+								iconNone = value.icon_image;
+							}else{
+								iconRusak = value.icon_image;
+							}
+						});
+
+						var markers = locationsews.map(function(location, i) {
+							if(location.jml < 1){
+								console.log($rootScope.base_url + "image/icons/" + belumTerpasang);
 								return new google.maps.Marker({
 									position: location,
 									label: location.ipaddr,
 									icon: {
-										//url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
-										url: $rootScope.base_url + "image/marker_merah_kecil.png" 
+										//url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+										// url: $rootScope.base_url + "image/marker_hitam_kecil.png" 
+										url: $rootScope.base_url + "image/icons/" + belumTerpasang
 									}
 								});
-							} else {
-								if(rep.ews_arah != "NONE"){
+							}else{
+								var rep = location.rpt[0];
+								// "ews_battery_percent": 0,
+								// "ews_arah": "LEFT",
+								// "ews_status_sensor_L": "FAIL",
+								// "ews_status_sensor_C": "OK",
+								// "ews_status_sensor_R": "OK",
+								// "ews_suhu_confan": "28.30\/27.80",
+								// "ews_teg_out_sirine": 10.48,
+								// "ews_arus_lam_stop": 0.01,
+								// "ews_arus_lam_flash": "",
+								// "ews_arus_lam_left": "",
+								// "ews_arus_lam_right": 0,
+								// "ews_arus_speaker": "",
+								// "lampu_merah": "RUSAK",
+								// "lampu_kuning": "OFF",
+								// "arah_icon": "kiri",
+								// "lampu_arah": "kiri_rusak",
+								// "speaker": "RUSAK"
+								if(rep.lampu_merah == "RUSAK" || rep.lampu_kuning == "RUSAK" || rep.lampu_arah == "rusak" || rep.speaker == "RUSAK" ){
 									return new google.maps.Marker({
 										position: location,
 										label: location.ipaddr,
-										animation: google.maps.Animation.BOUNCE,
 										icon: {
 											//url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
-											url: $rootScope.base_url + "image/marker_orange_kecil.png" 
+											// url: $rootScope.base_url + "image/marker_merah_kecil.png" 
+											url: $rootScope.base_url + "image/icons/" + iconRusak
 										}
 									});
-								}else{
-									return new google.maps.Marker({
-										position: location,
-										label: location.ipaddr,
-										icon: {
-											///url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
-											url: $rootScope.base_url + "image/marker_hijau_kecil.png" 
-										}
-									});									
+								} else {
+									if(rep.ews_arah != "NONE"){
+										return new google.maps.Marker({
+											position: location,
+											label: location.ipaddr,
+											animation: google.maps.Animation.BOUNCE,
+											icon: {
+												//url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+												// url: $rootScope.base_url + "image/marker_orange_kecil.png" 
+												url: $rootScope.base_url + "image/icons/" + iconNone
+											}
+										});
+									}else{
+										return new google.maps.Marker({
+											position: location,
+											label: location.ipaddr,
+											icon: {
+												///url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+												// url: $rootScope.base_url + "image/marker_hijau_kecil.png" 
+												url: $rootScope.base_url + "image/icons/" + iconNormal
+											}
+										});									
+									}
+
 								}
 
 							}
-
-						}
-
-					});
-
-					// Add a marker clusterer to manage the markers.
-					var markerCluster = new MarkerClusterer(
-						map, 
-						markers,
-						{
-							imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
-						}
-					);
-
-					angular.forEach(markers, function(value, key){
-						markers[key].addListener('click', function() {
-							var pos = {
-								ipaddr : markers[key].getLabel(),
-								alamat : "desc.id",
-								pole : "pole.id"
-							};
-							$scope.showContent(event, pos);
 						});
+
+						// Add a marker clusterer to manage the markers.
+						var markerCluster = new MarkerClusterer(
+							map, 
+							markers,
+							{
+								imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+							}
+						);
+
+						angular.forEach(markers, function(value, key){
+							markers[key].addListener('click', function() {
+								var pos = {
+									ipaddr : markers[key].getLabel(),
+									alamat : "desc.id",
+									pole : "pole.id"
+								};
+								$scope.showContent(event, pos);
+							});
+						});
+
+
 					});
 
 				}else{
@@ -4762,10 +4790,10 @@ angular.module('starter.controllers', [])
 	$scope.getWeather = function(kota){
 		//https://api.apixu.com/v1/current.json?key=6733513206fb451287083310191606&q=wlingi
 
-		// NewTrans.getWeather(kota).then(function(res){
-		// 	var result = res.data;
-		// 	$scope.weathers = result;
-		// });
+		NewTrans.getWeather(kota).then(function(res){
+			var result = res.data;
+			$scope.weathers = result;
+		});
 
 	};
 
