@@ -2,7 +2,7 @@
       <div class="pull-right hidden-xs">
         <b>Version</b> <?php echo CI_VERSION ?>
       </div>
-      <strong>Copyright &copy; 2018 Wantech </strong> All rights reserved.
+      <strong>Copyright &copy; 2018 Monika </strong> All rights reserved.
     </footer>
 
   </div>

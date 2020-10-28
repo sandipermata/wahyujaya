@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Wantech</title>
+  <title>Monika</title>
   <link rel="shortcut icon" href="<?php echo base_url('image/logo.png')?>">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap/dist/css/bootstrap.min.css')?>">
@@ -106,7 +106,7 @@
 
     <a href="<?php echo site_url() ?>" class="logo">
       <span class="logo-mini">WT</span>
-      <span class="logo-lg"><b>Wantech</b></span>
+      <span class="logo-lg"><b>Monika</b></span>
     </a>
 
     <nav class="navbar navbar-static-top">
