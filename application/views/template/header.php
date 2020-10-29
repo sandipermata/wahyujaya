@@ -105,7 +105,7 @@
     <header class="main-header">
 
     <a href="<?php echo site_url() ?>" class="logo">
-      <span class="logo-mini">WT</span>
+      <span class="logo-mini">Monika</span>
       <span class="logo-lg"><b>Monika</b></span>
     </a>
 
